@@ -138,6 +138,10 @@ module X
           formatted_source || source
         end
         
+        def xeditable?(object)
+          true
+        end
+        
       end
     end
   end
