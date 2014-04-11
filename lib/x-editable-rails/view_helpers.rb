@@ -30,7 +30,7 @@ module X
           error   = options.delete(:e)
           
           if xeditable?(object)
-            model   = object.class.name.split('::').last.underscore
+            model   = options.delete(:model_class){ object.class.name.split('::').last.underscore }
             nid     = options.delete(:nid)
             nested  = options.delete(:nested)
             title   = options.delete(:title) do
